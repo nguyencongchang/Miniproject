@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context=".view.CalendarFragment"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/pro_text_regular"
+            android:text="@string/title_fragment_calendar"
+            android:textColor="@color/mainColor"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:layout_gravity="center" />
+
+        <LinearLayout
+            android:layout_marginTop="16dp"
+            android:id="@+id/linearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            >
+
+            <Button
+                android:layout_width="85dp"
+                android:layout_height="36dp"
+                android:text="@string/btn_left"
+                android:textAllCaps="false"
+                android:background="@drawable/shape_btn3"
+                android:textColor="@color/mainColor"
+                android:gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                />
+
+            <Button
+                android:layout_width="85dp"
+                android:layout_height="36dp"
+                android:text="@string/btn_center"
+                android:textAllCaps="false"
+                android:background="@drawable/shape_btn3"
+                android:textColor="@color/mainColor"
+                android:gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                />
+
+            <Button
+                android:layout_width="85dp"
+                android:layout_height="36dp"
+                android:text="@string/btn_right"
+                android:textAllCaps="false"
+                android:background="@drawable/shape_btn3"
+                android:textColor="@color/mainColor"
+                android:gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"/>
+        </LinearLayout>
+
+        <devs.mulham.horizontalcalendar.HorizontalCalendarView
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="12dp"
+            android:id="@+id/calendarView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:selectorColor="@color/backgroundFragment"
+            app:textColorNormal="@color/textColorBlack"
+            app:textColorSelected="@color/mainColor"
+            />
+        <ScrollView
+            android:id="@+id/sample_scroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <com.example.appbookroom.view.DayView
+                android:id="@+id/sample_day"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/large_padding"
+                app:dividerHeight="@dimen/divider_height"
+                app:endHour="@integer/end_hour"
+                app:eventMargin="@dimen/small_padding"
+                app:halfHourHeight="55dp"
+                app:hourDividerColor="@color/hour_divider"
+                app:hourLabelMarginEnd="@dimen/large_padding"
+                app:hourLabelWidth="@dimen/hour_label_width"
+                app:startHour="@integer/start_hour" />
+        </ScrollView>
+
+    </LinearLayout>
+</layout>
